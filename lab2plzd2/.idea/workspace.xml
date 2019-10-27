@@ -30,6 +30,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="LogFilters">
@@ -47,7 +48,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1S9xFhtgXgWTwUUEagiSJCx7byB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
@@ -177,12 +180,23 @@
       <workItem from="1572173628833" duration="143000" />
       <workItem from="1572173794607" duration="771000" />
       <workItem from="1572207310947" duration="241000" />
-      <workItem from="1572207882412" duration="267000" />
+      <workItem from="1572207882412" duration="803000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lab2plzd2$Tomcat_9_0_0_M26.ic" NAME="Tomcat 9.0.0.M26 Coverage Results" MODIFIED="1570990963668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
