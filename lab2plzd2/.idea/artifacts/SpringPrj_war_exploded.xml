@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SpringPrj:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SpringPrj" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap:4.3.1" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:1.11.1" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:3.0.0" />
+          <element id="library" level="project" name="Maven: org.webjars:popper.js:1.14.3" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="SpringPrj/web/Web" />
+    </root>
+  </artifact>
+</component>
