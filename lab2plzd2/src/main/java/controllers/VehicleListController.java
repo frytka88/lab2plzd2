@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Vehicle;
+import models.VehicleType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,14 @@ import java.util.List;
 public class VehicleListController {
 
     protected static final List<Vehicle> lista = new ArrayList<>();
+    protected static final List<VehicleType> vehicleTypes = new ArrayList<>();
 
     static {
+
+        vehicleTypes.add(new VehicleType(1, "SEDAN"));
+        vehicleTypes.add(new VehicleType(2, "COUPE"));
+        vehicleTypes.add(new VehicleType(3, "CABRIOLET"));
+        vehicleTypes.add(new VehicleType(4, "SUV"));
 
         int id = 1;
         Vehicle v1 = new Vehicle();
@@ -25,6 +32,7 @@ public class VehicleListController {
         v1.setModel("Giulia");
         v1.setProductionDate(new Date(118, 6, 1));
         v1.setPrice(12900);
+        v1.setVehicleType(vehicleTypes.get(0));
         lista.add(v1);
 
         Vehicle v2 = new Vehicle();
@@ -33,6 +41,7 @@ public class VehicleListController {
         v2.setModel("X - type");
         v2.setProductionDate(new Date(106, 2, 21));
         v2.setPrice(10500);
+        v2.setVehicleType(vehicleTypes.get(3));
         lista.add(v2);
 
         Vehicle v3 = new Vehicle();
@@ -41,6 +50,7 @@ public class VehicleListController {
         v3.setModel("Pandion");
         v3.setProductionDate(new Date(100, 8, 16));
         v3.setPrice(400400);
+        v3.setVehicleType(vehicleTypes.get(1));
         lista.add(v3);
     }
 

@@ -12,7 +12,6 @@
 <body>
 <div id="main">
     <H1>LISTA POJAZDOW</H1>
-    <H3></H3>
 
     <c:if test="${empty lista}">
         Lista pojazdów jest pusta
@@ -39,10 +38,8 @@
                     <td><fmt:formatDate value="${pojazd.productionDate}" type="date" timeStyle="medium"/></td>
                     <td><fmt:formatNumber type="CURRENCY" value="${pojazd.price}" currencySymbol="PLN"/></td>
                     <td>
-                            <%--                        <button type="button" class="btn btn-primary">Edytuj</button>--%>
-                        <a class="btn btn-primary" href="vehicleForm.html?id=${pojazd.id}">Edytuj</a>
+                        <a class="btn btn-primary" href="/add.html?id=${pojazd.id}">Edytuj</a>
                         <a class="btn btn-danger" href="?rId=${pojazd.id}">Usuń</a>
-                            <%--                        <button type="button" class="btn btn-danger"">Usuń</button>--%>
                     </td>
                 </tr>
             </c:forEach>

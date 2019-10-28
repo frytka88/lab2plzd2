@@ -17,6 +17,7 @@
 </head>
 <body>
 <div id="main" class="container">
+
     <form:form modelAttribute="vehicle">
         <div class="form-group">
             <label for="name">Nazwa:</label>
@@ -28,12 +29,24 @@
         </div>
         <div class="form-group">
             <label for="price">Cena:</label>
-            <form:input path="price" cssClass="form-control"/>
+            <form:input path="price" cssClass="form-control" type="" cssErrorClass="form-control is-invalid"/>
+            <form:errors path="price" cssClass="error text-danger" element="div"/>
         </div>
         <div class="form-group">
             <label for="productionDate">Data Produkcji:</label>
-            <form:input path="productionDate" cssClass="form-control" type="date"/>
+            <form:input path="productionDate" cssClass="form-control" type="date" cssErrorClass="form-control is-invalid"/>
+            <form:errors path="productionDate" cssClass="error text-danger" element="div"/>
         </div>
+
+        <div class="form-group">
+            <label for="vehicleType.id">Typ Pojazdu: </label>
+            <form:select path="vehicleType.id" cssClass="form-control" cssErrorClass="form-control is-invalid">
+                <form:option value="-1"> Wybierz typ pojazdu </form:option>
+                <form:options items="${vehicleTypes}" itemLabel="name" itemValue="id"/>
+            </form:select>
+            <form:errors path="vehicleType.id" cssClass="error text-danger" element="div"/>
+        </div>
+
         <button type="submit" class="btn btn-success" class="btn btn-success">Wyślij</button>
     </form:form>
     <br>
