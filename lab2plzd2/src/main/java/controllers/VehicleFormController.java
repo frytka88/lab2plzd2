@@ -1,17 +1,20 @@
 package controllers;
 
 import models.Vehicle;
+import models.VehicleType;
 import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.text.DecimalFormat;
+import java.util.List;
 
 @Controller
+@SessionAttributes(names = {"vehicleTypes", "vehicle"}) //zad2
 public class VehicleFormController {
 
     @RequestMapping(value = "/add.html", method = RequestMethod.GET) //Pobranie strony z formularzem
@@ -28,7 +31,16 @@ public class VehicleFormController {
     }
 
     @RequestMapping(value = "/add.html", method = RequestMethod.POST) //Wysylanie formularza
-    public String processForm(Model model, Vehicle vehicle) {
+    public String processForm(@Valid @ModelAttribute("vehicle") Vehicle vehicle, BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors()) {
+            return "vehicleForm";
+        }
+
+        if (vehicle.getVehicleType().getId() > 0) {
+            VehicleType vehicleType = VehicleListController.vehicleTypes.stream().filter(xType -> xType.getId() == vehicle.getVehicleType().getId()).findFirst().get();
+            vehicle.setVehicleType(vehicleType);
+        }
 
         if (vehicle.getId() > 0) {
             for (int i = 0, n = VehicleListController.lista.size(); i < n; i++) {
@@ -44,6 +56,13 @@ public class VehicleFormController {
 // redirect jest do przekierowania / cofniecia |
 // taka odpowiedź jest zwracana do przeglądarki a ona automatycznie generuje kolejne żądanie (przekierowanie) pod nowy URL.
     }
+
+    @ModelAttribute("vehicleTypes")
+    public List<VehicleType> loadType() {
+        List<VehicleType> types = VehicleListController.vehicleTypes;
+        return types;
+    }
+
 
     @InitBinder
     public void initBinder(WebDataBinder binder) {
