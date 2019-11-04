@@ -54,8 +54,8 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/statics/**", "/webjars/**", "/", "/vehicleList.html").permitAll()
-                .antMatchers( "/vehicle.html").hasRole("USER")
-                .antMatchers( "/vehicle**").hasRole("ADMIN")
+//                .antMatchers( "/vehicle.html").hasRole("USER")
+//                .antMatchers( "/vehicle**").hasRole("ADMIN")
                 .anyRequest().authenticated();//każde żądanie ma być uwierzytelnione
         http
                 .formLogin() //pozwól użytkownikom uwierzytelniać się poprzez formularz
