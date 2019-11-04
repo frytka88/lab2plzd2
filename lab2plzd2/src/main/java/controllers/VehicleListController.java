@@ -2,6 +2,7 @@ package controllers;
 
 import models.Vehicle;
 import models.VehicleType;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -60,6 +61,7 @@ public class VehicleListController {
         return "vehicleList";
     }
 
+    @Secured("IS_AUTHENTICATED_ANONYMOUSLY")
     @RequestMapping(path = "/vehicleList.html", params = "id", method = RequestMethod.GET)
     public String vehicleDetails(Model model, int id) {
         Vehicle vehicle = lista.stream().filter(findId -> findId.getId() == id).findFirst().get();
@@ -67,6 +69,7 @@ public class VehicleListController {
         return "vehicleDetails";
     }
 
+    @Secured("ROLE_ADMIN")
     @GetMapping(path = "/vehicleList.html", params = {"rId"})
     public String removeVehicle(int rId) {
         for (int i = 0, n = VehicleListController.lista.size(); i < n; i++) {
