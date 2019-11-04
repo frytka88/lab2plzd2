@@ -27,6 +27,13 @@
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.12.1" />
           <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:6.1.0.Final" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.0.0.RC1" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:5.0.0.RC1" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.0.0.RC1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:5.0.0.RC1" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.0.0.RC1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.0.1.RELEASE" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="SpringPrj/web/Web" />
