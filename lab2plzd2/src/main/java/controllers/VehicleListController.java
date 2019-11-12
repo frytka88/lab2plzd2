@@ -77,14 +77,15 @@ public class VehicleListController {
     @GetMapping(path = "/vehicleList.html", params = {"rId"})
     public String removeVehicle(long rId) {
 
-        vehicleRepository.deleteById(rId);
-//
-//        for (int i = 0, n = VehicleListController.lista.size(); i < n; i++) {
-//            if (VehicleListController.lista.get(i).getId() == rId) {
-//                VehicleListController.lista.remove(i);
-//                break;
-//            }
+//        if (vehicleRepository.findById(rId).isPresent()) {
+//            vehicleRepository.deleteById(rId);
 //        }
+        for (int i = 0, n = VehicleListController.lista.size(); i < n; i++) {
+            if (VehicleListController.lista.get(i).getId() == rId) {
+                VehicleListController.lista.remove(i);
+                break;
+            }
+        }
         return "redirect:vehicleList.html";
     }
 

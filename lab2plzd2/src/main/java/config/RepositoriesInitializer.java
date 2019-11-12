@@ -29,7 +29,7 @@ public class RepositoriesInitializer {
 //                vehicleTypeRepository.saveAndFlush(new VehicleType("COUPE"));
 //                vehicleTypeRepository.saveAndFlush(new VehicleType("CABRIOLET"));
 //                vehicleTypeRepository.saveAndFlush(new VehicleType("SUV"));
-//
+
 //                Vehicle vehicle1 = new Vehicle();
 //                vehicle1.setName("Alfa Romeo");
 //                vehicle1.setModel("Giulia");

@@ -7,85 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="689b7eaa-34a0-4c3d-8969-d4ff1de8e841" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_8_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/JpaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/RepositoriesInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/VehicleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/VehicleTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SpringPrj_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SpringPrj_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_1_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringPrj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringPrj.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/DispatcherServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/DispatcherServletInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/MvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/controllers/HomeController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/controllers/VehicleFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/controllers/VehicleFormController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/controllers/VehicleListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/controllers/VehicleListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/models/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/models/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/models/VehicleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/models/VehicleType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-aop-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-beans-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-context-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-core-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-expression-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-jcl-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-tx-5.0.1.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-web-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/lib/spring-webmvc-5.1.9.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/DispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/DispatcherServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/RepositoriesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/RepositoriesInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VehicleFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VehicleFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VehicleListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VehicleListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/VehicleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/VehicleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/DispatcherServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/DispatcherServletInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/MvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/HomeController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/VehicleFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/VehicleFormController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/VehicleListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/VehicleListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/VehicleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/VehicleType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/home.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

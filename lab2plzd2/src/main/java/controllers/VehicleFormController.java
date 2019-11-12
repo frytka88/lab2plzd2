@@ -17,8 +17,6 @@ import java.util.List;
 @SessionAttributes(names = {"vehicleTypes", "vehicle"}) //zad2
 public class VehicleFormController {
 
-
-
     @RequestMapping(value = "/add.html", method = RequestMethod.GET) //Pobranie strony z formularzem
     public String showForm(Model model, @RequestParam(name = "id", required = false, defaultValue = "-1") int id) {
         Vehicle v;
