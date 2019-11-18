@@ -1,9 +1,15 @@
 package models;
 
-import java.io.Serializable;
+import javax.persistence.*;
+import javax.validation.constraints.Min;
 
-public class VehicleType implements Serializable {
+@Entity
+@Table(name = "vehicleTypes")
+public class VehicleType {
 
+    @Min(0)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
@@ -12,6 +18,10 @@ public class VehicleType implements Serializable {
 
     public VehicleType(int id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    public VehicleType(String name) {
         this.name = name;
     }
 
