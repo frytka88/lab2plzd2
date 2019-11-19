@@ -35,9 +35,14 @@ public class DispatcherServletInitializer extends AbstractAnnotationConfigDispat
 
     @Override
     protected FilterRegistration.Dynamic registerServletFilter(ServletContext servletContext, Filter filter) {
-        FilterRegistration.Dynamic characterEncoding = servletContext.addFilter("characterEncoding", filter);
-        characterEncoding.addMappingForUrlPatterns(null, true, "/*");
-        return characterEncoding;
+
+        if(filter instanceof  CharacterEncodingFilter) {
+            FilterRegistration.Dynamic characterEncoding = servletContext.addFilter("characterEncoding", filter);
+            characterEncoding.addMappingForUrlPatterns(null, true, "/*");
+            return characterEncoding;
+        }else{
+            return super.registerServletFilter(servletContext, filter);
+        }
     }
 }
 
