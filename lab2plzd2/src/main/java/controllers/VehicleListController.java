@@ -61,11 +61,11 @@ public class VehicleListController {
 //        lista.add(v3);
 //    }
 
-//    @RequestMapping(value = "/vehicleList.html", method = RequestMethod.GET)
-//    public String showVehicleList(Model model) {
-//        model.addAttribute("vehicleList", lista);
-//        return "vehicleList";
-//    }
+    @RequestMapping(value = "/vehicleList.html", method = RequestMethod.GET)
+    public String showVehicleList(Model model) {
+        model.addAttribute("vehicleList", vehicleRepository.findAll());
+        return "vehicleList";
+    }
 
     @Secured("IS_AUTHENTICATED_FULLY")
     @GetMapping(path = "/vehicleList.html", params = "id")

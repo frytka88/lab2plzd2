@@ -5,9 +5,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<jsp:include page="shared/header.jsp"></jsp:include>
 <c:import url="shared/header.jsp">
-    <c:param name="pageName" value="lista"></c:param>
+    <c:param name="pageName" value="vehicleList"></c:param>
 </c:import>
 <html>
 <head>
@@ -17,12 +16,12 @@
 <div id="main">
     <H1>LISTA POJAZDOW</H1>
 
-    <c:if test="${empty lista}">
+    <c:if test="${empty vehicleList}">
         Lista pojazdów jest pusta
     </c:if>
 
-    <c:if test="${not empty lista}">
-        Lista zawiera ${fn:length(lista)} pojazdów
+    <c:if test="${not empty vehicleList}">
+        Lista zawiera ${fn:length(vehicleList)} pojazdów
         <table class="table table-striped">
             <thead>
             <tr>
@@ -33,7 +32,7 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${lista}" var="pojazd">
+            <c:forEach items="${vehicleList}" var="pojazd">
                 <tr>
                     <td>
                         <a href="?id=${pojazd.id}">${pojazd.name}</a>
@@ -52,9 +51,9 @@
             </tbody>
         </table>
 
-        <c:set var="page" value="${lista}" scope="request"/>
+        <c:set var="page" value="${vehicleList}" scope="request"/>
         <c:set var="mainUrl" value="vehicleList.html" scope="request"/>
-        <jsp:include page="shared/pagination.jsp"/>
+        <%--<jsp:include page="shared/pagination.jsp"/>--%>
     </c:if>
     <security:authorize access="hasRole('ADMIN')">
         <al>

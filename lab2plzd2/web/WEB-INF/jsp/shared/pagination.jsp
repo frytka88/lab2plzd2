@@ -1,6 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ c:taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:url var="firstPageUrl" value="${mainUrl}?page=0&size=${page.size}"/>
 <c:url var="prevPageUrl" value="${mainUrl}?page=${page.number - 1}&size=${page.size}"/>
 <c:url var="nextPageUrl" value="${mainUrl}?page=${page.number + 1}&size=${page.size}"/>
