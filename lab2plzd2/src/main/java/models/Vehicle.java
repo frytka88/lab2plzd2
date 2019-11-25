@@ -12,6 +12,7 @@ public class Vehicle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "vehicleId", nullable = false)
     private long id;
 
     @Column(name = "name", nullable = false)

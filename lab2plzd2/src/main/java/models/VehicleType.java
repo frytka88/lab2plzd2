@@ -10,6 +10,7 @@ public class VehicleType {
     @Min(0)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "vehicleTypeId", nullable = false)
     private int id;
 
     private String name;

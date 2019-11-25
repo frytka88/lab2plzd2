@@ -16,11 +16,9 @@
 <body>
 <div id="main">
     <H1>Poprawnie dodany pojazd</H1>
-
     <c:if test="${empty vehicleListPageable.content}">
         ${searchCommand.isEmpty() ? 'Lista pojazdów jest pusta' : 'Brak wyników'}
     </c:if>
-
     <c:if test="${not empty vehicleListPageable.content}">
 
         <c:choose>
