@@ -1,7 +1,6 @@
 package models;
 
 import javax.persistence.*;
-import java.sql.Types;
 import java.util.Set;
 
 @Entity
@@ -13,12 +12,12 @@ public class Role {
     @Column(name = "roleId", nullable = false)
     private Long id;
 
-    @Enumerated(EnumType.STRING)//przechowywane w postaci string
+    @Enumerated(EnumType.STRING) //przechowywane w postaci string
     @Column(name = "type", nullable = false)
     private Types type;
 
     @ManyToMany(mappedBy = "roles")
-    private Set<User> users;
+    private Set <User> users;
 
     public Role(){};
 
@@ -29,5 +28,29 @@ public class Role {
     public enum Types{
         ROLE_ADMIN,
         ROLE_USER
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Types getType() {
+        return type;
+    }
+
+    public void setType(Types type) {
+        this.type = type;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 }

@@ -11,20 +11,20 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userId", nullable = false)
+    @Column(name = "UserId", updatable = false, nullable = false)
     private Long id;
 
-    @Size(min = 4, max = 36)
-    @Column(name = "username", nullable = false)
+    @Column(name = "Surname", length = 32)
     private String username;
 
     @Size(min = 4, max = 36)
-    @Column(name = "password", nullable = false)
+    @Column(name = "Password", nullable = false)
     private String password;
 
     @Transient //nie będzie odwzorowana w db
     private String passwordConfirm;
 
+    @Column(name = "orEnabled")
     private boolean enabled = false;
 
     @AssertTrue

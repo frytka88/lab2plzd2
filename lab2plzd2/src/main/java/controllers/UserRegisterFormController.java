@@ -15,21 +15,21 @@ import javax.validation.Valid;
 @Controller
 public class UserRegisterFormController {
 
-//    @Autowired
-//    private UserService userService;
-//
-//    @GetMapping("/registerForm.html")
-//    public String register(Model model) {
-//        model.addAttribute("userCommand", new User());
-//        return "registerForm";
-//    }
-//
-//    @PostMapping("/registerForm.html")
-//    public String registration(@Valid @ModelAttribute("userCommand") User userForm, BindingResult bindingResult) {
-//        if (bindingResult.hasErrors()) {
-//            return "registerForm";
-//        }
-//        userService.save(userForm);
-//        return "registerSuccess";
-//    }
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/registerForm.html")
+    public String register(Model model) {
+        model.addAttribute("userCommand", new User());
+        return "registerForm";
+    }
+
+    @PostMapping("/registerForm.html")
+    public String register(@Valid @ModelAttribute("userCommand") User userForm, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "registerForm";
+        }
+        userService.save(userForm);
+        return "registerSuccess";
+    }
 }

@@ -13,38 +13,35 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.access.AccessDeniedHandlerImpl;
 
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true)
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
-    @Profile({ProfileNames.DATABASE}) //, ProfileNames.INMEMORY
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     @Profile(ProfileNames.INMEMORY)
-    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
+    public UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        User.UserBuilder userBuilder = User.builder();
+        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
 
         UserDetails user = userBuilder
                 .username("user")
-                .password(passwordEncoder.encode("user"))
+                .password("user")
                 .roles("USER")
                 .build();
 
         UserDetails admin = userBuilder
                 .username("admin")
-                .password(passwordEncoder.encode("admin"))
+                .password("admin")
                 .roles("ADMIN")
                 .build();
 
         UserDetails test = userBuilder
                 .username("test")
-                .password(passwordEncoder.encode("test"))
+                .password("test")
                 .roles("USER", "ADMIN")
                 .build();
 
@@ -54,11 +51,24 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         return manager;
     }
 
+    @Bean
+    @Profile(ProfileNames.DATABASE)
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    public AccessDeniedHandler createAccessDeniedHandler(){
+        AccessDeniedHandlerImpl impl = new AccessDeniedHandlerImpl();
+        impl.setErrorPage("/error403");//url
+        return impl;
+    }
+
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/statics/**", "/webjars/**", "/", "/vehicleList.html", "/registerForm.html").permitAll()
+                .antMatchers("/statics/**", "/webjars/**", "/", "/vehicleList.html", "/registerForm.html", "/registerSuccess.html").permitAll()
                 .antMatchers( "/vehicle.html").hasRole("USER")
                 .antMatchers( "/vehicle**").hasRole("ADMIN")
                 .anyRequest().authenticated(); //każde żądanie ma być uwierzytelnione
@@ -69,6 +79,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .logout() //pozwól wszystkim użykownikom się wylogować
                 .permitAll();//
+
+        http.exceptionHandling().accessDeniedHandler(createAccessDeniedHandler());
     }
 }
 

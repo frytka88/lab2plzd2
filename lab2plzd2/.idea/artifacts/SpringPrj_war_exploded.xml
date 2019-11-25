@@ -105,6 +105,26 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.2.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:5.2.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: com.ibm.icu:icu4j:58.2" />
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: org.abego.treelayout:org.abego.treelayout.core:1.0.3" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr-runtime:3.5.2" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr4-runtime:4.7.1" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr4:4.7.1" />
+          <element id="library" level="project" name="Maven: org.antlr:ST4:4.0.8" />
+          <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.0.0" />
+          <element id="library" level="project" name="Maven: org.glassfish:javax.json:1.0.4" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: org.hibernate.orm:hibernate-core:6.0.0.Alpha3" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.1.1.Final" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.3.1" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.3.1" />
+          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.3.1" />
+          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-engine:1.3.1" />
+          <element id="library" level="project" name="Maven: org.junit.vintage:junit-vintage-engine:5.3.1" />
+          <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.1.1" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.2.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.2.2.RELEASE" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="SpringPrj/web/Web" />

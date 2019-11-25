@@ -16,11 +16,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@EnableSpringDataWebSupport
 @ComponentScan(basePackages = "controllers", basePackageClasses = WebMvcConfigurerImpl.class)
-@EnableGlobalMethodSecurity(securedEnabled = true)
 @EnableWebMvc
-//@Import(RepositoriesInitializer.class)
+@EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableSpringDataWebSupport
+@Import(RepositoriesInitializer.class)
 public class MvcConfig {
 
     @Bean(name = "messageSource")
