@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="statics/css/main.css"/>
 </head>
 <body>
-<div id="header" class="card-header">
+<div id="header2" class="card-header" >
     <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
@@ -25,18 +25,18 @@
                 </div>
             </security:authorize>
             <security:authorize access="isAuthenticated()">
-            <div>
-                <label style="color:pink; margin-top: 15px;">
-                    Cześć <security:authentication property="principal.username"/>!
-                </label>
-            </div>
-            <div>
-                <a href="#" onclick="document.getElementById('logout').submit()">Wyloguj się</a>
-                <form action="/logout" id="logout" method="post" style="display: none;">
-                    <security:csrfInput/>
-                </form>
-            </div>
-                </security:authorize>
+                <div>
+                    <label style="color:pink; margin-top: 15px;">
+                        Cześć <security:authentication property="principal.username"/>!
+                    </label>
+                </div>
+                <div>
+                    <a href="#" onclick="document.getElementById('logout').submit()">Wyloguj się</a>
+                    <form action="/logout" id="logout" method="post" style="display: none;">
+                        <security:csrfInput/>
+                    </form>
+                </div>
+            </security:authorize>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav"></ul>
             </div>

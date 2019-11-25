@@ -18,31 +18,31 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     @Bean
-    public UserDetailsService userDetailsService() {
+    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
+        User.UserBuilder userBuilder = User.builder();
 
         UserDetails user = userBuilder
                 .username("user")
-                .password("user")
+                .password(passwordEncoder.encode("user"))
                 .roles("USER")
                 .build();
 
         UserDetails admin = userBuilder
                 .username("admin")
-                .password("admin")
+                .password(passwordEncoder.encode("admin"))
                 .roles("ADMIN")
                 .build();
 
         UserDetails test = userBuilder
                 .username("test")
-                .password("test")
+                .password(passwordEncoder.encode("test"))
                 .roles("USER", "ADMIN")
                 .build();
 
@@ -68,7 +68,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout() //pozwól wszystkim użykownikom się wylogować
                 .permitAll();//
     }
-
 }
 
 

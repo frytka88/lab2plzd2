@@ -7,21 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="689b7eaa-34a0-4c3d-8969-d4ff1de8e841" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/commands/VehicleFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SpringPrj_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SpringPrj_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/config/beans/WebMvcConfigurerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/controllers/VehicleListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/controllers/VehicleListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/repositories/VehicleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/repositories/VehicleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/shared/pagination.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/shared/pagination.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/MvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/RepositoriesInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/RepositoriesInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/classes/config/SpringSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/shared/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/shared/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/successVehicleForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/successVehicleForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/vehicleDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/vehicleDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/vehicleForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/vehicleForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/vehicleList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/WEB-INF/jsp/vehicleList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VehicleListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VehicleListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/VehicleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/VehicleListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/VehicleListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repositories/VehicleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/VehicleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/shared/pagination.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/shared/pagination.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SpringPrj_war_exploded/resources/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/RepositoriesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/RepositoriesInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/MvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/RepositoriesInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/RepositoriesInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/SpringSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/shared/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/shared/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/successVehicleForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/successVehicleForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/vehicleDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/vehicleDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/vehicleForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/vehicleForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/vehicleList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/vehicleList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
