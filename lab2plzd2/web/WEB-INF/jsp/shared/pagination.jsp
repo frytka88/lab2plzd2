@@ -1,4 +1,5 @@
-<%@ c:taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <c:url var="firstPageUrl" value="${mainUrl}?page=0&size=${page.size}"/>
 <c:url var="prevPageUrl" value="${mainUrl}?page=${page.number - 1}&size=${page.size}"/>
 <c:url var="nextPageUrl" value="${mainUrl}?page=${page.number + 1}&size=${page.size}"/>
@@ -9,13 +10,13 @@
 
         <li ${page.first?'class="disabled"':''}>
             <a href="${page.first?'#':firstPageUrl}">
-                <span>Pierwsza</span>
+                <span>Pierwsza </span>
             </a>
         </li>
 
         <li ${page.first?'class="disabled"':''}>
             <a href="${page.first?'#':prevPageUrl}">
-                <span>&laquo;</span>
+                <span> &laquo; </span>
             </a>
         </li>
 
@@ -28,13 +29,13 @@
 
         <li ${page.last?'class="disabled"':''}>
             <a href="${page.last?'#':nextPageUrl}">
-                <span>&raquo;</span>
+                <span> &raquo; </span>
             </a>
         </li>
 
         <li ${page.last?'class="disabled"':''}>
             <a href="${page.last?'#':lastPageUrl}">
-                <span>Ostatnia</span>
+                <span> Ostatnia</span>
             </a>
         </li>
 
