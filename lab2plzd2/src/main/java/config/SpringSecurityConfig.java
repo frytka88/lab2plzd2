@@ -2,6 +2,7 @@ package config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -18,37 +19,24 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     @Bean
-    public UserDetailsService userDetailsService() {
+    @Profile(ProfileNames.INMEMORY)
+    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
+
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
+        User.UserBuilder userBuilder = User.builder();
 
         UserDetails user = userBuilder
                 .username("user")
-                .password("user")
+                .password(passwordEncoder.encode("user"))
                 .roles("USER")
                 .build();
-
-        UserDetails admin = userBuilder
-                .username("admin")
-                .password("admin")
-                .roles("ADMIN")
-                .build();
-
-        UserDetails test = userBuilder
-                .username("test")
-                .password("test")
-                .roles("USER", "ADMIN")
-                .build();
-
         manager.createUser(user);
-        manager.createUser(admin);
-        manager.createUser(test);
         return manager;
     }
 
@@ -56,7 +44,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/statics/**", "/webjars/**", "/", "/vehicleList.html").permitAll()
+                .antMatchers("/statics/**", "/webjars/**", "/", "/vehicleList.html", "/registerForm.html", "/registerSuccess.html").permitAll()
                 .antMatchers( "/vehicle.html").hasRole("USER")
                 .antMatchers( "/vehicle**").hasRole("ADMIN")
                 .anyRequest().authenticated(); //każde żądanie ma być uwierzytelnione
@@ -68,7 +56,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout() //pozwól wszystkim użykownikom się wylogować
                 .permitAll();//
     }
-
 }
 
 

@@ -9,15 +9,14 @@
 <c:import url="shared/header.jsp">
     <c:param name="pageName" value="lista"></c:param>
 </c:import>
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Dodawanie pojazdu</title>
 </head>
 <body>
+<p></p>
 <div id="main" class="container">
-
     <form:form modelAttribute="vehicle">
         <div class="form-group">
             <label for="name">Nazwa:</label>

@@ -1,22 +1,24 @@
 package config;
 
+import config.beans.WebMvcConfigurerImpl;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@EnableSpringDataWebSupport
-@ComponentScan(basePackages = "controllers")
+@ComponentScan(basePackages = "controllers" , basePackageClasses = WebMvcConfigurerImpl.class)
 @EnableWebMvc
-public class MvcConfig implements WebMvcConfigurer {
+@EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableSpringDataWebSupport
+@Import(RepositoriesInitializer.class)
+public class MvcConfig {
 
     @Bean(name = "messageSource")
     public MessageSource reloadableResourceBundleMessageSource() {
@@ -32,20 +34,6 @@ public class MvcConfig implements WebMvcConfigurer {
         resolver.setPrefix("/WEB-INF/jsp/");
         resolver.setSuffix(".jsp");
         return resolver;
-    }
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/statics/**")
-                .addResourceLocations("/resources/");
-        registry.addResourceHandler("/webjars/**")
-                .addResourceLocations("classpath:/META-INF/resources/webjars/");
-    }
-
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/login").setViewName("loginForm");
-        registry.addViewController("/").setViewName("home");
     }
 }
 

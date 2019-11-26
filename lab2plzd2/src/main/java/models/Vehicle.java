@@ -1,5 +1,9 @@
 package models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import validators.Invalid;
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -8,6 +12,9 @@ import java.util.Date;
 
 @Entity
 @Table(name = "vehicles")
+@Getter
+@Setter
+@AllArgsConstructor
 public class Vehicle {
 
     @Id
@@ -46,71 +53,4 @@ public class Vehicle {
         this.vehicleType = new VehicleType();
         this.productionDate = new Date(); // ??
     }
-
-    public Vehicle(long id, String model, String name, Date productionDate, Float price, VehicleType vehicleType, Boolean exclusive) {
-        this.id = id;
-        this.model = model;
-        this.name = name;
-        this.productionDate = productionDate;
-        this.price = price;
-        this.vehicleType = vehicleType;
-        this.exclusive = exclusive;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Date getProductionDate() {
-        return productionDate;
-    }
-
-    public void setProductionDate(Date productionDate) {
-        this.productionDate = productionDate;
-    }
-
-    public Float getPrice() {
-        return price;
-    }
-
-    public void setPrice(Float price) {
-        this.price = price;
-    }
-
-    public VehicleType getVehicleType() {
-        return vehicleType;
-    }
-
-    public void setVehicleType(VehicleType vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
-    public Boolean getExclusive() {
-        return exclusive;
-    }
-
-    public void setExclusive(Boolean exclusive) {
-        this.exclusive = exclusive;
-    }
-
 }
