@@ -14,24 +14,23 @@ import services.UserService;
 import javax.validation.Valid;
 
 @Controller
-public class UserRegistrationFormController {
+public class UserRegisterFormController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/registrationForm.html")
+    @GetMapping("/registerForm.html")
     public String registration(Model model) {
         model.addAttribute("userCommand", new User());
-        return "registrationForm";
+        return "registerForm";
     }
 
-    @PostMapping("/registrationForm.html")
+    @PostMapping("/registerForm.html")
     public String registration(@Valid @ModelAttribute("userCommand") User userForm, BindingResult bindingResult) {
-
         if (bindingResult.hasErrors()) {
-            return "registrationForm";
+            return "registerForm";
         }
         userService.save(userForm);
-        return "registrationSuccess";
+        return "registerSuccess";
     }
 
     @InitBinder

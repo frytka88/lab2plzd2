@@ -14,7 +14,7 @@
     <title>Lista pojazdów</title>
 </head>
 <body>
-<div id="main" class="container">
+<div id="main">
     <H1>LISTA POJAZDOW</H1>
 
     <form:form id="searchForm" modelAttribute="searchCommand">
@@ -24,7 +24,6 @@
                 <form:input path="phrase" cssClass="form-control" cssErrorClass="form-control is-invalid"/>
                 <form:errors path="phrase" cssClass="error text-danger" element="div"/>
             </div>
-
             <div class="form-group col-md-3">
                 <label for="phrase">Cena od:</label>
                 <form:input path="minPrice" cssClass="form-control" cssErrorClass="form-control is-invalid"/>
@@ -37,9 +36,7 @@
             </div>
         </div>
         <div class="row">
-
             <div class="form-group col-md-8"></div>
-
             <div class="form-group col-md-2">
                 <a href="/vehicleList.html?all" class="btn btn-success">
                     <span class="glyphicon glyphicon-refresh"></span> Pokaż wszystko

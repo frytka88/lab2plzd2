@@ -23,6 +23,9 @@
                 <div ${param['pageName'] == 'logonForm' ?'class="active"':''}>
                     <a href="/login">Zaloguj się</a>
                 </div>
+                <div ${param['pageName'] == 'registerForm' ?'class="active"':''}>
+                    <a href="/registerForm.html">Zarejestruj się</a>
+                </div>
             </security:authorize>
             <security:authorize access="isAuthenticated()">
             <div>

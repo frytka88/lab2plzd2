@@ -1,10 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-
 <jsp:include page="shared/header.jsp">
-    <jsp:param name="pageName" value="registrationForm"/>
+    <jsp:param name="pageName" value="registerForm"/>
 </jsp:include>
 <html>
 <body>
@@ -15,7 +13,7 @@
         <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
             <form:form modelAttribute="userCommand">
 
-                <h1>Proszę, zarejestruj się</h1>
+                <h1>Zarejestruj się</h1>
                 <div class="form-group">
                     <form:errors path="*" cssClass="alert alert-danger" element="div">
 

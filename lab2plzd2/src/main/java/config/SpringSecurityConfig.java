@@ -19,35 +19,6 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-//        User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
-//
-//        UserDetails user = userBuilder
-//                .username("user")
-//                .password("user")
-//                .roles("USER")
-//                .build();
-//
-//        UserDetails admin = userBuilder
-//                .username("admin")
-//                .password("admin")
-//                .roles("ADMIN")
-//                .build();
-//
-//        UserDetails test = userBuilder
-//                .username("test")
-//                .password("test")
-//                .roles("USER", "ADMIN")
-//                .build();
-//
-//        manager.createUser(user);
-//        manager.createUser(admin);
-//        manager.createUser(test);
-//        return manager;
-//    }
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -73,7 +44,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/statics/**", "/webjars/**", "/", "/vehicleList.html", "/registrationForm.html").permitAll()
+                .antMatchers("/statics/**", "/webjars/**", "/", "/vehicleList.html", "/registerForm.html", "/registerSuccess.html").permitAll()
                 .antMatchers( "/vehicle.html").hasRole("USER")
                 .antMatchers( "/vehicle**").hasRole("ADMIN")
                 .anyRequest().authenticated(); //każde żądanie ma być uwierzytelnione
