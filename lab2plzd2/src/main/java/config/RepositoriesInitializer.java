@@ -8,7 +8,6 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import repositories.RoleRepository;
 import repositories.UserRepository;
@@ -38,7 +37,6 @@ public class RepositoriesInitializer {
     private PasswordEncoder passwordEncoder;
 
     @Bean
-    @Profile(ProfileNames.DATABASE)
     InitializingBean initializingBean(){
         return () -> {
 

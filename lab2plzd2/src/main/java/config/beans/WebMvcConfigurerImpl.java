@@ -23,9 +23,4 @@ public class WebMvcConfigurerImpl implements WebMvcConfigurer {
         registry.addViewController("/login").setViewName("loginForm");
         registry.addViewController("/").setViewName("home");
     }
-
-    @Override
-    public void addFormatters(FormatterRegistry registry) {//globalna obsługa daty w formularzach
-        registry.addFormatter(new DateFormatter("yyyy-MM-dd"));
-    }
 }

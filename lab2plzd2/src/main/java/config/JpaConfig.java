@@ -33,7 +33,7 @@ public class JpaConfig {
     ) {
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(hibernateJpaVendorAdapter);
-        factory.setDataSource((javax.sql.DataSource) dataSource);
+        factory.setDataSource(dataSource);
         factory.setJpaProperties(jpaProperties);
         factory.setPackagesToScan("models");
         return factory;
