@@ -8,7 +8,9 @@ import validators.Invalid;
 import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "vehicles")
@@ -49,8 +51,12 @@ public class Vehicle {
     @JoinColumn(name = "type_id", nullable = false)
     private VehicleType vehicleType;
 
+    @ManyToMany(fetch = FetchType.LAZY) //LAZY powoduje dociągnięcie tych elementów dopiero wtedy, gdy są używane
+    private List<Accessory> accessories;
+
     public Vehicle() {
         this.vehicleType = new VehicleType();
         this.productionDate = new Date(); // ??
+        this.accessories = new ArrayList<>();
     }
 }

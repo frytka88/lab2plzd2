@@ -22,5 +22,6 @@ public class WebMvcConfigurerImpl implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/login").setViewName("loginForm");
         registry.addViewController("/").setViewName("home");
+        registry.addViewController("/error403").setViewName("errors/error403");
     }
 }

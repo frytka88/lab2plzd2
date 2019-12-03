@@ -1,7 +1,10 @@
 package controllers;
 
+import lombok.extern.log4j.Log4j2;
+import models.Accessory;
 import models.Vehicle;
 import models.VehicleType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import repositories.VehicleRepository;
 import repositories.VehicleTypeRepository;
+import services.VehicleService;
 
 import javax.validation.Valid;
 import java.text.DecimalFormat;
@@ -18,15 +22,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@SessionAttributes(names = {"vehicleTypes", "vehicle"})
+@SessionAttributes(names = {"vehicleTypes", "vehicle", "accessoryList"})
+@Log4j2
 public class VehicleFormController {
 
-    private VehicleRepository vehicleRepository;
-    private VehicleTypeRepository vehicleTypeRepository;
+    private VehicleService vehicleService;
 
-    public VehicleFormController(VehicleRepository vehicleRepository, VehicleTypeRepository vehicleTypeRepository) {
-        this.vehicleRepository = vehicleRepository;
-        this.vehicleTypeRepository = vehicleTypeRepository;
+    public VehicleFormController(VehicleService vehicleService)
+    {
+        this.vehicleService = vehicleService;
     }
 
     @Secured("ROLE_ADMIN")
@@ -42,16 +46,22 @@ public class VehicleFormController {
 //        if(bindingResult.hasErrors()){
 //            return "vehicleForm";
 //        }
-        vehicleRepository.save(vehicle);
+        vehicleService.saveVehicle(vehicle);
         return "successVehicleForm";
     }
 
     @ModelAttribute("vehicleTypes")
     public List<VehicleType> loadType() {
-        List<VehicleType> types = vehicleTypeRepository.findAll();
+        List<VehicleType> types = vehicleService.getAllTypes();
         return types;
     }
 
+    @ModelAttribute("accessoryList")
+    public List<Accessory> loadAccessories(){
+        List<Accessory> accessories = vehicleService.getAllAccessories();
+        log.info("Ładowanie listy "+ accessories.size()+" akcesoriów ");
+        return accessories;
+    }
 
     @InitBinder
     public void initBinder(WebDataBinder binder) {

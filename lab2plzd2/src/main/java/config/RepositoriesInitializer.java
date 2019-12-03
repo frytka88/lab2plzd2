@@ -1,18 +1,12 @@
 package config;
 
-import models.Role;
-import models.User;
-import models.Vehicle;
-import models.VehicleType;
+import models.*;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import repositories.RoleRepository;
-import repositories.UserRepository;
-import repositories.VehicleRepository;
-import repositories.VehicleTypeRepository;
+import repositories.*;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -32,6 +26,9 @@ public class RepositoriesInitializer {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private AccessoryRepository accessoryRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -59,6 +56,13 @@ public class RepositoriesInitializer {
                 userRepository.save(user);
                 userRepository.save(admin);
                 userRepository.save(test);
+            }
+
+            if(accessoryRepository.findAll().isEmpty() == true){
+                accessoryRepository.save(new Accessory("Automat"));
+                accessoryRepository.save(new Accessory("Lampy ledowe lasorowe"));
+                accessoryRepository.save(new Accessory("Klimatyzacja automatyczna"));
+                accessoryRepository.save(new Accessory("Napęd na 4x4"));
             }
 
             if (vehicleTypeRepository.findAll().isEmpty()){
