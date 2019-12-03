@@ -9,15 +9,14 @@
 <c:import url="shared/header.jsp">
     <c:param name="pageName" value="lista"></c:param>
 </c:import>
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Dodawanie pojazdu</title>
 </head>
 <body>
+<p></p>
 <div id="main" class="container">
-
     <form:form modelAttribute="vehicle">
         <div class="form-group">
             <label for="name">Nazwa:</label>
@@ -45,6 +44,11 @@
                 <form:options items="${vehicleTypes}" itemLabel="name" itemValue="id"/>
             </form:select>
             <form:errors path="vehicleType.id" cssClass="error text-danger" element="div"/>
+        </div>
+        <div class="form-group">
+            <label>Wyposażenie pojazdu:</label>
+            <form:checkboxes path="accessories" element="div class='checkbox' style='left:25px;'" items="${accessoryList}" itemLabel="name" itemValue="id"/>
+            <form:errors path="accessories" cssClass="error text-danger" element="div"></form:errors>
         </div>
 
         <button type="submit" class="btn btn-success" class="btn btn-success">Wyślij</button>

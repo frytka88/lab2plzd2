@@ -12,7 +12,6 @@
 <div id="main" class="container">
     To moja strona domowa
     <br/>
-    ${ja} (zadania 2)
     <br/>
     <br/>
     <br/>
